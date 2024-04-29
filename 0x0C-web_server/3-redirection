@@ -17,6 +17,6 @@ printf %s "server {
     location /redirect_me {
         return 301 https://github.com/hassanademuyiwa;
     }
-}" > /etc/nginx/sites-available/default
+}" > /etc/nginx/sites-enabled/default
 
 service nginx restart
