@@ -7,7 +7,11 @@ apt-get install -y nginx
 
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
+<<<<<<< HEAD
 echo "Holberton School" > /etc/nginx/html/index.html
+=======
+echo "Hello World!" > /etc/nginx/html/index.html
+>>>>>>> f431c2640205154aa27384427fbf4bda1df9a3bf
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
@@ -15,8 +19,14 @@ printf %s "server {
     index  index.html index.htm;
 
     location /redirect_me {
+<<<<<<< HEAD
         return 301 http://cuberule.com/;
     }
 }" > /etc/nginx/sites-available/default
+=======
+        return 301 https://github.com/hassanademuyiwa;
+    }
+}" > /etc/nginx/sites-enabled/default
+>>>>>>> f431c2640205154aa27384427fbf4bda1df9a3bf
 
 service nginx restart

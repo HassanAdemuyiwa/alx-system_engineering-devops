@@ -11,7 +11,11 @@ apt-get install -y nginx
 
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
+<<<<<<< HEAD
 echo "Holberton School" > /etc/nginx/html/index.html
+=======
+echo "Hello World!"> /etc/nginx/html/index.html
+>>>>>>> f431c2640205154aa27384427fbf4bda1df9a3bf
 touch /etc/nginx/html/404.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
@@ -22,7 +26,11 @@ printf %s "server {
     index  index.html index.htm;
 
     location /redirect_me {
+<<<<<<< HEAD
         return 301 http://cuberule.com/;
+=======
+        return 301 https://github.com/hassanademuyiwa/;
+>>>>>>> f431c2640205154aa27384427fbf4bda1df9a3bf
     }
 
     error_page 404 /404.html;
@@ -30,6 +38,12 @@ printf %s "server {
       root /etc/nginx/html;
       internal;
     }
+<<<<<<< HEAD
 }" > /etc/nginx/sites-available/default
 
 service nginx restart
+=======
+}" > /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
+>>>>>>> f431c2640205154aa27384427fbf4bda1df9a3bf
